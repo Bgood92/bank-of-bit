@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{410BFA75-5587-4BBB-8457-F039D6F9C1D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsBankingApplication</RootNamespace>
+    <AssemblyName>WindowsBankingApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\WindowsBanking\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Batch.cs" />
+    <Compile Include="ConstructorData.cs" />
+    <Compile Include="frmBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBatch.designer.cs">
+      <DependentUpon>frmBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClients.designer.cs">
+      <DependentUpon>frmClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistory.designer.cs">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransaction.designer.cs">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BankService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBatch.resx">
+      <DependentUpon>frmBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClients.resx">
+      <DependentUpon>frmClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistory.resx">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransaction.resx">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.AccountState.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.BankAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.BankOfBITContext.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.BronzeState.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.ChequingAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.Client.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.ExternalLogin.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.GoldState.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.Institution.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.InvestmentAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.LocalPasswordModel.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.LoginModel.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.MortgageAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.NextChequingAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.NextClientNumber.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.NextInvestmentAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.NextMortgageAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.NextSavingsAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.NextTransactionNumber.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.Payee.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.PlatinumState.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.RegisterExternalLoginModel.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.RegisterModel.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.RFIDTag.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.SavingsAccount.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.SilverState.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.StoredProcedures.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.Transaction.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.TransactionType.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.UserProfile.datasource" />
+    <None Include="Properties\DataSources\BankOfBIT.Models.UsersContext.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\BankService\TransactionManager.wsdl" />
+    <None Include="Service References\BankService\TransactionManager.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BankService\TransactionManager1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BankOfBIT\BankOfBIT.csproj">
+      <Project>{451686C3-D8A9-4DB4-84D0-05402BA68505}</Project>
+      <Name>BankOfBIT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MaskedLabel\MaskedLabel.csproj">
+      <Project>{049F1B57-22DE-42E2-A648-B64B82BF6DF5}</Project>
+      <Name>MaskedLabel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Utility.csproj">
+      <Project>{1DFB919A-6DD3-4F37-A1C4-5DA42400C74D}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BankService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankService\TransactionManager.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BankService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

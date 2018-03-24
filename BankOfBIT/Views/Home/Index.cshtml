@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            @*Modified the following p tag*@
+            <p> 
+                Welcome to the Bank of BIT Online Banking Application. Users may securely 
+                execute a variety of banking operations using this application.
+            </p>
+        </div>
+    </section>
+}
+@*Modified the following h3 tag*@
+<h3>We offer the following:</h3>
+
+@*Modified the following list items
+*@<ol class="round">
+    <li class="one">
+        <h5>Transfer Funds</h5>
+        Clients can conveniently transfer funds between accounts
+    </li>
+
+    <li class="two">
+        <h5>Bill Payments</h5>
+        Clients can conveniently pay bills through this Online Banking Application. 
+        All majority utility companies are included for online banking payments.
+    </li>
+
+    <li class="three">
+        <h5>Client Management</h5>
+        Clients can update their contact information using this application.
+    </li>
+
+    <li class="four">
+        <h5>Account Management</h5>
+        Clients can update their Bank Account information using this application
+    </li>
+</ol>

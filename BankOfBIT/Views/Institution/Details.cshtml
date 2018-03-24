@@ -1,0 +1,29 @@
+﻿@model BankOfBIT.Models.Institution
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Institution</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InstituionNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InstituionNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.InstitutionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
